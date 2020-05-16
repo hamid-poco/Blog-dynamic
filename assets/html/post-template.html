@@ -1,0 +1,326 @@
+
+
+
+
+
+
+<div class="main">
+<section class="blog-list">
+<div class="container">
+  <h2>Why Every Developer Should Have A Blog</h2>
+  <div class="title-two"> Published 2 days ago . 5 min read . <a href="#"> 8 comments</a></div>
+<div>
+<figure >
+  <a href=""><img class="img-about hamid-two" src="img/hamid2.jpg" alt="image"></a>
+  <figcaption class="">Image Credit: <a href="" target="_blank">made4dev.com (Premium Programming T-shirts)</a></figcaption>
+</figure>
+  <p>A blog is useful for many reasons. It can become a source of leads,
+      it can be the place where, in the future, you might sell your products if you want
+      to become an indie developer, or it can simply be the place where you have your
+        audience and express your ideas. </p>
+  
+  <h3>/* COMMENTS
+    ------------------------------*/</h3>
+    <pre style="width: auto; height: auto; overflow: scroll;">
+      <code class="language-js">
+        
+        /* COMMENTS
+        ------------------------------*/
+        
+        
+        // This is single line comment
+        
+        /* 
+        this is a block 
+        comment */
+        
+        
+        
+        
+        /* VARIABLES , NAMING RULES
+        ------------------------------*/
+        
+        
+        //1. NO SPACES BETWEEN
+        //2. YOU CANNOT START NAME WITH NUMBERS
+        //3. NO DASHES BETWEEN OF TWO NAME JUST UNDERSCORE, UPPERCASE OR Dollar sign
+        //4. YOU CANNOT USE "RESERVED KEYWORDS" SAME "IF,This,LET..." 
+
+        let Str = "MY NAME IS HAMID ?"; 
+        const num = 9;                 
+        var good =false;              
+        
+        /* NAMING BEST PRACTICES
+          CAMEL CASE
+        ------------------------------ */
+        
+        let my_name = "Hamid";                           // UNDERSCORE
+        let myName = "Bob";                              // CAMEL CASE
+        let SomeHeadsAreGonnaRoll = "Judas Priest Song"; // CAMEL CASE
+        
+        /* JS IS CASE SENSITIVE
+        ------------------------------ */
+        let name = "Hamid";
+        // not the same as this 
+        let Name = "Hamid";
+        
+        /* A VAR. IT'S CONTAINER
+        * IT CAN CONTAIN EVERYTHING
+        ------------------------------ */
+        let number = 9;             // Numbers
+        let text = "Bla bla";       // String
+        let cond = true;            // Booleans
+        let data = [1,2,3,"hamid"]; // Array
+        let object = {
+          name: "John",
+          age: 23
+        };                          // Abject
+        
+        
+        
+        
+        /* STRINGS
+        ------------------------------ */
+        let str1 = "I'm 18 years of age.";
+        let str2 = 'I\'m 18 years of age.'; //Escape character
+        
+        // In JS we concatenate with + sign
+        let str3 = "I'm " + 27; 
+        
+        let person1 = "Bob";
+        let age = 32;
+        let phrase = person1+ " is " + age + " years old";  
+        
+        consol.log (phrase);
+
+        //NATIVE STRING METHODS
+        let txt          = "Apple is red";
+        let textLength   = txt.length; 
+        
+        let txt2         = "Beatles";     //console.log(txt.split(""));
+        let txt3         = "powercoders"; //console.log(txt3.substr(5, 2) );
+        
+        /* NUMBERS
+        ------------------------------ */
+        
+        let integer     = 92;           //INTEGER
+        let negative    = -92;          //Negetive
+        let float       = 1.5;          //Float
+        let calculate   = 8 + 2;        //Calculate
+        let calc2       = 2 + 3 * 10;   //32
+        let calc3       = (2 + 3) * 10; //50
+        let calc4       = -2 + (-2);    //-4
+        
+        //MODULO OPERATOR
+
+        let reminder; // Declare the variable with undifine value
+        reminder = 110 % 60;       console.log(reminder);
+        
+        reminder = 3 % 2;          console.log(reminder);
+        
+        
+        
+        
+        
+        //NATIVE NUMBER MEHTODS
+
+        let rand        =Math.random() *10;        //console.log(rand);
+        let randInd     =Math.round(rand);         //console.log(randInd);
+        let roundceil   =Math.ceil(1.212545654);   //console.log(roundceil);
+        let roundFloor  =Math.floor(1.2);          //console.log(roundFloor);
+        
+        
+        
+        
+        
+        /* ARRAY (LISTS)
+        ------------------------------ */
+        let arr1     = [1,2,3,4,5];                  //console.log(arr1);
+        let arr2     = ["Bob", "Marc", "Tom"];     //console.log(arr2);
+                                                    //console.log( arr2[2]);                //Bob         
+                                                    //console.log( "number array:"arr1[2]); //3       
+        
+        
+        //NATIVE ARRAY METHODS
+        //ADD TO THE ARRAY
+
+        arr2.push("Bob");      //console.log(arr2); // It will be added in the end of ARRAY
+                            
+        
+        
+        //DELETE FROM THE ARRAY
+        //arr2.pop();          //console.log(arr2); //remove last element
+        //arr2.shift();        //console.log(arr2); //remove first element
+        
+        //arr2.splice(1, 2);   //console.log(arr2); // With th num 1, keep first element and
+                                                    //remove 2 element after first element we chose
+
+        
+        //CHANGE A VALUE INSIDE AN ARRAY
+
+        arr2[1] = "Jack";      //console.log(arr2); //Now Jack repalced with Marc
+
+
+        
+        //USING splice METHODS TO MODIFY an ARRAY
+        
+        arr2.splice(1, 0, "freddy");     //console.log(arr2);   //Now we chose index 1 and with chose 0 
+                                                                //i dont want any remove element just after Marc(1)
+                                                                //we add freddy
+        
+        
+        /* FUNCTIONS
+        ------------------------------ */
+          function calculateAge(name, birthYear) {
+        
+          //let name ="Jack";
+          let data = new Date();
+          let currentYear = data.getFullYear(); //console.log(currentYear);
+          let age = currentYear - birthYear;    //num years repalce with birhYaer
+        
+          return name + " is " + age + " years old.";//Jack is 27 years old
+        
+          //NOTING WILL BE DISPLAYED AFTER THE FIRST RETURN
+          let bob = 40;
+          return bob ;
+        };
+
+          console.log( calculateAge("Bob", 1993) );   //=> Bob is 27 years old.  
+          console.log( calculateAge("Marc", 1980) );  //=> Marc is 40 years old.
+          console.log( calculateAge("Jack", 1967) );  //=> Bob is 53 years old.
+        
+        
+        /* TO PREVENT THE console.log(); FROM REPEATING IN
+          CALL WE CAN USE INSIDE THE FUNCTIONS  */
+        
+          function calculateAge(name, birthYear) {
+        
+          //let name ="Jack";
+          let data = new Date();
+          let currentYear = data.getFullYear();  //console.log(currentYear);
+          let age = currentYear - birthYear;     //Num years repalce with birhYaer
+        
+      =>  console.log( name + " is " + age + " years old.");//Jack is 27 years old
+        
+        
+        }
+        // now we dont use the console.log(); too much,
+        calculateAge("Bob", 1993);          //=> Bob is 27 years old.
+        calculateAge("Marc", 1993);         //=> Marc is 40 years old.
+        calculateAge("Jack", 1993);         //=> Jack is 53 years old.
+
+        
+        
+        
+        //RETURN DAY OF THE WEEK BASED ON A NUMBER 
+        
+          function dayOfTheWeek(index) {
+          
+          let days = ["Monday", "Tuseday", "wednesday", "Friday", "saturday", "Sunday"];
+        
+          return days[index]; 
+        }
+        
+        console.log(dayOfTheWeek(0)); => Monday
+        
+        
+        //CALL THE NAME WITH Hello,Bonjour,...
+
+        function callName (greeting, name) { 
+        
+          return greeting + " " + name + "!"; //Hello, Hi , Bomjour...
+        };
+        
+        console.log(callName("Bonjour", "Jack"));  => Bonjour Jack
+        console.log(callName("Hello", "Bob"));       => Hello Bob
+        
+        
+        
+        //CONVERT MINUTES TO SECONDS
+        
+        function minToSec (x) {
+          return x + " min = " + x * 60 + " " +"sec";
+        }
+        
+        console.log(minToSec(6)); =>means     (60min * 60sec)       => 6min = 360 sec
+        console.log(minToSec(24*60)); =>means (24h * 60min * 60sec) => 1440min = 86400 sec
+        
+        
+        //with property .prompt()  we can see same alert with questions
+        function minToSecPrompt() {
+          return x + " min = " + user * 60 + " " +"sec";
+        }
+        let user = prompt("convert min to sec");
+        console.log(minToSec(user));
+        
+        
+        
+        
+        
+        /* OBJECTS
+        ------------------------------ */
+        //My Object include = Name, gender, age, country
+
+        let person = {
+        
+          name : "Bob",
+          gender : "Male",
+          age : 27,
+          country : "Uk"
+        
+        };
+
+        // we can call object in three ways
+        console.log(person);  
+        console.log(person["name"]);
+        console.log(person.name);
+        
+        
+        //Example TWO
+
+        let persons = {
+        
+            Bob: {
+        
+            name : "Bob",
+            gender : "Male",
+            age : 27,
+            country : "Uk"
+            },
+        
+            Marc: {
+        
+            name : "Marc js",
+            gender : "Male",
+            age : 37,
+            country : "GR"
+            },
+        
+              Sara: {
+        
+            name : "Sara",
+            gender : "Fmale",
+            age : 20,
+            country : "IR"
+            }
+        
+        };
+        
+        console.log(persons.Marc.name); => Marc js
+      </code>
+    </pre>
+<nav class="next">
+<a class="next-one" href="index.html"><i class="arrow-prev fas fa-long-arrow-alt-left"></i>Previous</a>
+<a class="next-two" href="about.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+</nav>
+<div>
+<noscript>
+    Please enable JavaScript to view the 
+    <a href="" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+</div>
+</div>
+  </div>
+    </section>
+  </div>
+ 

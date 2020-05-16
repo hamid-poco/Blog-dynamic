@@ -1,0 +1,474 @@
+/* THIS IS MY alternative CSS STYLESHEET, I SHOULD USE IT AS A GUIDANCE AND FOLLOW THE STRUCTURE. APRIL 8 2020.
+--------------------------------- */
+
+
+/* RESET
+--------------------------------- */
+/* #region  */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,
+pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
+form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,
+canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,
+ruby,section,summary,time,mark,audio,
+video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
+section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,
+q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+/* box model to border-box */
+html {
+  box-sizing: border-box;
+}
+
+
+/* #endregion */
+
+/* BASIC FORMATTING
+--------------------------------- */
+
+/* root formats */
+html {
+  font-size: 16px; /* font pixel size should always be to root */
+  scroll-behavior: smooth;
+  
+}
+
+/* the body formats */
+body {
+  font-size: 1rem; /* rem is related to the root (html), but em is related to the parent */
+  line-height: 1.6;
+  text-align: left;
+  font-family:Raleway,serif;
+  color: #4f4f4f;
+
+}
+
+
+
+/* links */
+.myname a {
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+.myname a:hover {
+  text-decoration: underline;
+  color: #00b300;
+  transition: all 0.4s ease-in-out;
+
+}
+
+.link-nav {
+  width: 32px;
+  height: 32px;
+  padding-top: 5px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  background-color: #fff;
+  color: #276624;
+}
+
+.link-nav:hover {
+  background-color: #00b300;
+  transition: all .4s ease-in-out
+}
+
+.link-nav-two {
+  text-decoration: none;
+  color:#fff;
+  outline: none;
+  transition: color 0.4s ease;
+}
+
+.link-nav-two:hover{
+  text-decoration: underline;
+  color: #00b300;
+}
+
+
+.btn-two {
+  text-decoration: none;
+  background-color:  #ff0040;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all .4s ease-in-out;
+}
+
+.btn-two:hover {
+  transition: all .4s ease-in-out;
+   background-color: #00b300;
+}
+
+.next-one {
+  background: #276624;;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  position: relative;
+  flex-basis: 0;
+  flex-grow: .5;
+  text-align: center;
+  border-radius: .25rem;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  margin: auto;
+}
+
+
+
+.next-one:hover {
+  transition: all .4s ease-in-out;
+  background-color: #00b300;
+}
+
+.title a {
+  text-decoration:none;
+  color: black;
+}
+
+.title a:hover {
+  text-decoration:underline;
+  color:black;
+}
+
+.title-two a {
+  color: #8f8f8f;
+  text-decoration: none;
+}
+
+.title-two a:hover {
+  text-decoration: underline;
+  color: #8f8f8f;
+}
+
+.paragraph a{
+  text-decoration: none;
+  color: #276624;
+}
+
+.paragraph a:hover {
+  text-decoration: underline;
+  color: #00b300;
+}
+
+.footer a {
+  color: #fafafa;
+  font-weight:500;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+
+}
+
+/* buttons */
+
+.btn {
+  padding-top: 20px;
+  background: none;
+}
+
+
+
+/* inputs */
+
+
+
+
+/* titles formatting */
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-weight: bold;
+}
+
+h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+
+h2 {
+  display: block;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+
+
+
+p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: .875rem;
+}
+
+/* HELPER CLASSES
+--------------------------------- */
+main {
+  display: block;
+  padding-left: 160px;
+  
+}
+
+
+.part-one {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  background: #276624;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+
+.myname {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.part-one.navbar {
+  padding: 2rem 1rem;
+}
+
+.ul-nav {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+}
+
+.li-nav {
+  display: inline-block;
+}
+
+.ul-nav-two {
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+
+}
+
+.li-nav-two {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.one {
+  background: #fafafa ;
+  display: block;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+main .container {
+  width: 100%;
+  max-width: 820px;
+  text-align: left;
+
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form {
+  padding-top: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  text-align: center;
+}
+
+.form-two {
+padding: .5rem;
+}
+
+
+.form-control {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  padding-left: .45rem;
+  height:auto;
+  border-color: #c2c2c2;
+  width: 300px;
+  border: 1px solid gray ;
+  border-radius: .25rem;
+}
+.btn-one{
+background-color: #276624;
+border: none;
+display: inline-block;
+font-weight: bold;
+padding: .375rem 1rem;
+height: 2.75rem;
+transition: all 0.4s ease-in-out;
+text-align: center;
+border-radius: .25rem;
+}
+
+
+.blog-list {
+  padding: 3rem 1rem;
+  display: block;
+}
+
+.item-one {
+  margin-bottom: 3rem;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.img {
+  max-width: 110px;
+  border-radius: .25rem;
+  margin-right: 1rem;
+  height: auto;
+  vertical-align: middle;
+}
+
+.next {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.footer {
+  background-color: black;
+  color: #8f8f8f;
+  text-align: center;
+  padding: 10px;
+}
+
+.item-one-one {
+  flex: 1;
+}
+
+.title-two {
+  color: #8f8f8f;
+  font-size: 0.8125rem;
+  margin-bottom: .25rem;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  display: block;
+}
+
+
+.img-hamid {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#code {
+  overflow: hidden;
+}
+
+/* LAYOUT
+--------------------------------- */
+
+hr{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #ff0040;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  width: 85%;
+}
+
+
+
+#code {
+  width: 100%;
+  margin: auto;
+}
+
+ 
+
+
+
+/* MEDIA QUERIES
+--------------------------------- */
+@media (max-width: 991.98px){
+  .part-one {
+      position: relative;
+      width: auto;
+      height: auto;
+      
+  }
+  }
+  
+  
+  @media (max-width: 991.98px){
+  main {
+      margin-left: 0;
+      position: relative;
+      padding-left: 0;
+      padding-right: 0;}
+
+ .container{
+    padding-left:0;
+    padding-right: 0;
+ }
+  }
+
+

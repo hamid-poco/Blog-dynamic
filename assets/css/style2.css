@@ -1,0 +1,399 @@
+/* THIS IS MY alternative CSS STYLESHEET, I SHOULD USE IT AS A GUIDANCE AND FOLLOW THE STRUCTURE. APRIL 8 2020.
+--------------------------------- */
+
+
+/* RESET
+--------------------------------- */
+/* #region  */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,
+pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
+form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,
+canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,
+ruby,section,summary,time,mark,audio,
+video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
+section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,
+q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+/* box model to border-box */
+html {
+  box-sizing: border-box;
+}
+
+
+/* #endregion */
+
+/* BASIC FORMATTING
+--------------------------------- */
+
+/* root formats */
+html {
+  font-size: 16px; /* font pixel size should always be to root */
+  scroll-behavior: smooth;
+}
+
+/* the body formats */
+body {
+  font-size: 1rem; /* rem is related to the root (html), but em is related to the parent */
+  line-height: 1.6;
+  text-align: left;
+  font-family:Raleway,serif;
+  font-size: 16px;
+
+}
+
+/* links */
+.myname a {
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+.myname a:hover {
+  text-decoration: underline;
+  color: #00b300;
+  transition: all 0.4s ease-in-out;
+
+}
+
+.link-nav {
+  width: 32px;
+    height: 32px;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    background-color: #fff;
+    color: #276624;
+}
+
+.link-nav:hover {
+  background-color: #00b300;
+  transition: all .4s ease-in-out
+}
+
+.link-nav-two {
+  text-decoration: none;
+  color:#fff;
+  outline: none;
+  transition: color 0.4s ease;
+}
+
+.link-nav-two:hover{
+  text-decoration: underline;
+  color: #00b300;
+}
+
+
+.btn-two {
+  text-decoration: none;
+  background-color:  #ff0040;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all .4s ease-in-out;
+}
+
+.btn-two:hover {
+  transition: all .4s ease-in-out;
+   background-color: #00b300;
+}
+
+.footer a {
+  color: #fafafa;
+  font-weight:500;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+
+}
+
+
+
+/* buttons */
+
+.btn {
+  padding-top: 25px;
+  background: none;
+}
+
+
+
+/* inputs */
+
+
+
+
+/* titles formatting */
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-weight: bold;
+}
+
+h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
+h2 {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #292929;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  color: #292929;
+  font-weight: bold;
+  line-height: 1.2;
+  display: block;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px
+}
+
+
+
+
+p{
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+span {
+  background: #fc0;
+}
+
+/* HELPER CLASSES
+--------------------------------- */
+main {
+  display: block;
+  margin-left: 280px;
+  
+}
+
+
+.part-one {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  background: #276624;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+
+.myname {
+  font-size: .875rem;
+  margin-bottom: 1rem;
+}
+
+.part-one.navbar {
+  padding: 2rem 1rem;
+}
+
+.ul-nav {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+}
+
+.li-nav {
+  display: inline-block;
+}
+
+
+.ul-nav-two {
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+  
+  
+
+}
+
+.li-nav-two {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.one {
+  background: #fafafa ;
+  display: block;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.form {
+  padding-top: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  text-align: center;
+}
+
+.form-two {
+  padding: .5rem;
+  }
+
+  .btn-one{
+    background-color: #276624;
+    border: none;
+    display: inline-block;
+    font-weight: bold;
+    padding: .375rem 1rem;
+    height: 2.75rem;
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+    border-radius: .25rem;
+    }
+
+    .form-control {
+      padding-top: 0.875rem;
+      padding-bottom: 0.875rem;
+      padding-left: .45rem;
+      height:auto;
+      border-color: #c2c2c2;
+      width: 300px;
+      border: 1px solid gray ;
+      border-radius: .25rem;
+      margin: auto;
+    }
+
+    .blog-list {
+      padding: 3rem 1rem;
+      display: block;
+    }
+
+    main .container {
+      max-width: 820px;
+      text-align: left;
+    
+    }
+
+    .footer {
+      background-color: black;
+      color: #8f8f8f;
+      text-align: center;
+      padding: 10px;
+    }
+
+
+    .img-hamid {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .img-about {
+      width: 100%;
+      height: auto;
+    }
+
+/* LAYOUT
+--------------------------------- */
+
+hr{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #ff0040;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  width: 85%;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES
+--------------------------------- */
+@media (max-width: 991.98px){
+.part-one {
+    position: static;
+    width: inherit;
+    height: auto;
+}
+}
+
+
+@media (max-width: 991.98px){
+main {
+  
+    margin-left: 0;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+}
+.container{
+  padding-left:0;
+  padding-right: 0;
+}
+}

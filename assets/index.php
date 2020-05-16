@@ -3,16 +3,16 @@ ini_set('display_errors', 1); //0 to disable
 error_reporting(E_ALL); //add this to hide notices:  & ~E_NOTICE
 
 // Check if GET key 'page' exists :
-// if( isset($_GET['page']) ) {
-// $page = $_GET['page'];
-// }
-// else {
-// $page = 'index';
+//  if( isset($_GET['page']) ) {
+//  $page = $_GET['page'];
+//  }
+//  else {
+//  $page = 'index';
 // }
 
 
 // Check if GET key 'page' exists on line variant :
-$page = $_GET['page'];
+ $page = isset($_GET['page']) ? $_GET['page'] : 'index'; 
 
 
 // Using a variable inside a PHP string
@@ -63,7 +63,7 @@ crossorigin="anonymous"></script>
 <header class="part-one">	    
 <h1>Hamid's Blog</h1>
   <nav class="navbar" > 
-  <a href="./"><img class="img-hamid" src="img/hamid.jpg" alt="image" ></a>		
+<a href="./"><img class="img-hamid" src="img/hamid.jpg" alt="image" >	</a>
     <div class="myname">Hi, my name is Hamid.You can find some examples about javascript.<br><a href="about.html">Find out more about me</a></div>
     <ul class="ul-nav">
             <li class="li-nav"><a class="link-nav" href="https://hamidhosseini680@gmail.com"><i class="far fa-envelope fa-fw"></i></a></li>

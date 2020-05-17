@@ -201,21 +201,45 @@ h1 {
 h2 {
   display: block;
   font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #292929;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 h3 {
   font-size: 1.5rem;
 }
 
-
-
-
-p {
-  font-weight: 400;
-  line-height: 1.5;
-  font-size: .875rem;
+h5 {
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  color: #292929;
+  font-weight: bold;
+  line-height: 1.2;
+  display: block;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px
 }
 
+
+p{
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+span {
+  background: #fc0;
+}
 /* HELPER CLASSES
 --------------------------------- */
 main {
@@ -331,6 +355,7 @@ padding: .5rem;
   width: 300px;
   border: 1px solid gray ;
   border-radius: .25rem;
+  margin: auto;
 }
 .btn-one{
 background-color: #276624;
@@ -415,6 +440,10 @@ border-radius: .25rem;
   overflow: hidden;
 }
 
+.img-about {
+  width: 100%;
+  height: auto;
+}
 /* LAYOUT
 --------------------------------- */
 
@@ -442,7 +471,16 @@ hr{
   margin: auto;
 }
 
- 
+header .ul-nav-two .active a {
+  color: #000;
+}
+header .ul-nav-two .active a:after {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: solid 3px #000;
+  margin-top: .3em;
+}
 
 
 

@@ -1,0 +1,31 @@
+{
+
+  
+    "global_title"  : "Welcome To Hamid's Blog",
+    "description"   : "how to learn JS a dynamic website",
+    "keywords"      : "php,js,function,array,hamid",
+		"author"        : "Hamid Hosseini",
+		"last_update"   : "17.05.2020",
+  
+
+  "pages"    : {
+
+    "index" : {
+      "title": "DevBlog - A Blog Template Made For Developers",
+      "menu" : "HOME"
+    },
+    "post-template": {
+      "title" : "Why Every Developer Should Have A Blog",
+      "menu" : "WORK"
+    },
+    "about": {
+      "title": "About Me",
+      "menu": "ABOUT ME"
+    },
+    "gallery": {
+      "title": "My picture",
+      "menu": "GALLERY"
+    }
+  }
+
+}

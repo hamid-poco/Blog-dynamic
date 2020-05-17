@@ -511,7 +511,16 @@ iframe {
 
 }
 
-
+header .ul-nav-two .active a {
+  color: #000;
+}
+header .ul-nav-two .active a:after {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: solid 3px #000;
+  margin-top: .3em;
+}
 
 /* LAYOUT
 --------------------------------- */

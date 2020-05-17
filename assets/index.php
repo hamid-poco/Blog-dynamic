@@ -1,24 +1,33 @@
 <?php
 ini_set('display_errors', 1); //0 to disable
-error_reporting(E_ALL); //add this to hide notices:  & ~E_NOTICE
+error_reporting(E_ALL); //add this to hide 
+function show($arr) {
 
-// Check if GET key 'page' exists :
-//  if( isset($_GET['page']) ) {
-//  $page = $_GET['page'];
-//  }
-//  else {
-//  $page = 'index';
-// }
+  echo '<pre>';
+  print_r($arr);
+  echo '</pre>';
+
+}
 
 
-// Check if GET key 'page' exists on line variant :
  $page = isset($_GET['page']) ? $_GET['page'] : 'index'; 
+ 
 
+ $site_data_json = file_get_contents("site_data.json");
 
-// Using a variable inside a PHP string
-// $name = "Hamid";
-// $using_double_quotes = "My name is $name and I'm here!"; // echo $using_double_quotes;
-// $using_single_quotes = 'My name is '.$name.' and voilà!'; echo $using_single_quotes;
+ $site_data = json_decode($site_data_json, true);
+ $pages = $site_data['pages'];
+
+ $li = '';
+ foreach($pages as $key => $item ) {
+
+  $active = ($key === $page) ? ' active' : '';
+
+  $li .= '<li class="li-nav-two'.$active.'">
+  <a class="link-nav-two" href="?page='.$key.'">'.$item['menu'].'</a>
+</li>'; 
+ }
+ 
 ?>
 <!DOCTYPE html>
 
@@ -28,12 +37,15 @@ error_reporting(E_ALL); //add this to hide notices:  & ~E_NOTICE
 
 <!--#meta-->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="How to use PHP to create a dynamic website">
-<meta name="keywords" content="php,dynamic site,cool,raoul">
-<meta name="author" content="Hamid Hosseini">
+
 <!--#title-->
-<title>welcome to my blog</title>
+<title><?php echo $pages[$page]['title']; ?></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="<?php echo $site_data['description']; ?>">
+<meta name="keywords" content="<?php echo $site_data['keywords']; ?>">
+<meta name="author" content="<?php echo $site_data['author']; ?>">
+
 
 <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -46,6 +58,7 @@ error_reporting(E_ALL); //add this to hide notices:  & ~E_NOTICE
 <meta name="theme-color" content="#ffffff">
 <!--css file-->
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style3.css">
 <link rel="stylesheet" href="plugins/prims/prism.css">
 
 <!--fontAwesome js-->
@@ -72,15 +85,9 @@ crossorigin="anonymous"></script>
         </ul>
         <hr> 
   <ul class="ul-nav-two">
-    <li class="li-nav-two">
-        <a class="link-nav-two" href="?page=index">HOME</a>
-    </li>
-    <li class="li-nav-two">
-        <a class="link-nav-two" href="?page=post-template">WORK</a>
-    </li>
-    <li class="li-nav-two">
-        <a class="link-nav-two" href="?page=about">ABOUT ME</a>
-    </li>
+
+    <?php echo $li; ?>
+
   </ul>
   <div class="btn">
     <a id="click" class="btn-two" href="#" onclick="myfunction();">Click me Please</a>
@@ -91,7 +98,9 @@ crossorigin="anonymous"></script>
 <main>
 
 <?php
+
 require_once("html/$page.html");
+
 ?>
   
 </main>
